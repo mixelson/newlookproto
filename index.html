@@ -1,132 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+<body style="background: #ffffff;font-size: 80%;padding: 20px;">
 
-<html>
-
-<head>
-
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-	<title>Платформа CoBrain-Analytics</title>
-	<meta name="description" content="Современные и удобные инструменты для работы с данными">
-
-	<link rel="stylesheet" href="./cobrain.io_files/tilda-grid-3.0.min.css" type="text/css" media="all">
-	<link rel="stylesheet" href="./cobrain.io_files/tilda-blocks-2.12.css" type="text/css" media="all">
-	<link rel="stylesheet" href="./cobrain.io_files/tilda-animation-1.0.min.css" type="text/css" media="all">
-	<link rel="stylesheet" href="./cobrain.io_files/tilda-popup-1.1.min.css" type="text/css" media="all">
-	<link rel="stylesheet" href="./cobrain.io_files/tilda-menusub-1.0.min.css" type="text/css" media="all">
-	<!-- <link rel="stylesheet" href="./cobrain.io_files/css" type="text/css"> -->
-
-</head>
-
-
-<style>
-#headerfix {
-    height: 80px;
-    background-color:#FFF;
-    font-size: 14px;
-    /*border-bottom: 3px solid #59A3C8;*/
-    z-index: 99999;
-    position: fixed;
-    width: 100%;
-}
-#preview-frame {
-    margin: 0 auto;
-    display: block;
-    padding-top: 60px;
-    width:100%;
-    height: 581px;
-}
-</style>
-
-
-
-
-<div id="headerfix">
-
-<div class="t228__maincontainer " style="height:96px;"> 
-	<div class="t228__padding40px"></div> 
-	<div class="t228__leftside"> 
-		<div class="t228__leftcontainer"> 
-			<a href="/" style="color:#ffffff;">
-				<img src="https://static.tildacdn.com/tild6138-3566-4464-b834-643565393139/cobrain_logo_color.png" class="t228__imglogo t228__imglogomobile" imgfield="img" style="max-width: 192px;width: 192px; height: auto; display: block;" alt="CoBrain-Analytics">
-			</a> 
-			
-		</div> 
-	</div> 
-
-	<div class="t228__centerside t228__menualign_right"> 
-		<div class="t228__centercontainer"> 
-			<ul class="t228__list "> 
-				<li class="t228__list_item" id="i_link" style="display:none;" onclick="$('#i_link').hide();$('#v_link').show();$('#d_link').show();"><a class="t-menu__link-item" href="cobrain.io.htm" target="preview-frame" style="color:#263238;font-size:14px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;text-decoration: none;font-size: 14px; " data-menu-item-number="1" >Информация</a></li> 
-				<li class="t228__list_item" id="v_link" onclick="$('#v_link').hide();$('#i_link').show();$('#d_link').show();"><a class="t-menu__link-item" href="https://gyrus.cobrain.io/" target="preview-frame" style="color:#263238;font-size:14px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;text-decoration: none;font-size: 14px;" data-menu-item-number="1">Витрина</a></li> 
-				<li class="t228__list_item" id="d_link" onclick="$('#d_link').hide();$('#i_link').show();$('#v_link').show();"><a class="t-menu__link-item" href="https://naja.cobrain.io/datasets/catalog" target="preview-frame" style="color:#263238;font-size:14px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;text-decoration: none;font-size: 14px;" data-menu-item-number="1">Датасеты</a></li> 
-
-
-				<!-- https://app.cobrain.io/files -->
-				<!-- <li class="t228__list_item"><a class="t-menu__link-item t794__tm-link" href="#submenu:services" style="color:#263238;font-size:14px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;text-decoration: none;" data-menu-item-number="2" data-tooltip-menu-id="77032950">Сервисы<div class="t794__arrow" style="height: 18px;"></div></a></li>  -->
-			</ul> 
-		</div> 
-	</div> 
-
-
-<!-- 
-	<img src="https://naja.cobrain.io/static/media/Logo.4871942d.svg">
-	<a href="cobrain.io.htm" target="preview-frame">Общие сведения</a>
-	<a href="https://gyrus.cobrain.io/" target="preview-frame">Витрина</a>
-	<a href="https://naja.cobrain.io/datasets/catalog" target="preview-frame">Датасеты</a> -->
-
-	<div class="t228__rightside"> 
-		<div class="t228__rightcontainer"> 
-			<div class="t228__right_buttons"> 
-				<div class="t228__right_buttons_wrap"> 
-					<div class="t228__right_buttons_but">
-						<a href="https://app.cobrain.io/" target="preview-frame" class="t-btn js-click-stat" data-tilda-event-name="/tilda/click/rec77032876/button1" style="color:#1bafe0;border:1px solid #1bafe0;background-color:#ffffff;border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px;font-weight:700;text-transform:uppercase;box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 1);    height: 40px;font-size: 14px;padding-left: 30px;font-size: 14px;color: #1bafe0;padding-right: 30px;margin-left: 10px;text-decoration: none;">
-							<table style="width:100%; height:100%;"><tbody><tr><td style="color: #1bafe0;font-weight:700;font-size: 14px;">Вход</td></tr></tbody></table>
-						</a>
-					</div> 
-					<div class="t228__right_buttons_but">
-						<a href="cobrain.io.htm#rec77171524" target="preview-frame" class="t-btn " style="color:#ffffff;background-color:#1bafe0;border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px;font-weight:700;text-transform:uppercase;box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 1);    height: 40px;font-size: 14px;padding-left: 30px;padding-right: 30px;font-size: 14px;margin-left: 10px;text-decoration: none;">
-							<table style="width:100%; height:100%;"><tbody><tr><td style="color: #fff;font-weight:700;font-size: 14px;">Регистрация</td></tr></tbody></table>
-						</a>
-					</div> 
-				</div> 
-			</div> 
-		</div> 
-	</div> 
-	<div class="t228__padding40px"></div> 
+<div style="line-height:400px; height:400px;border:0px solid green;text-align:center;">
+ <p style=" line-height:1.2; display:inline-block; vertical-align:middle;font-size:4em;" id="main"></p>
 </div>
 
-<script src="./cobrain.io_files/jquery-1.10.2.min.js"></script>
-
-<script type="text/javascript"> 
-$(document).ready(function(){ 
-	setTimeout(function(){ 
-
-		console.log('welcome!'); 
 
 
-		// var $contents = $('#preview-frame').contents();
-    	// $contents.scrollTop(80);
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
 
-    	// var iframe = $('#preview-frame').contents();
-		// iframe.scrollTop(880);
 
-	}, 2000); 
-}); 
+<script type="text/javascript">
 
-		// $("#preview-frame").load(function(){
-		// 	console.log('iframe welcome!'); 
+$(function() { /* init */
+  $('#main').text('Hello...');
 
-		// 	this.contentWindow.scrollBy(0,100000);
-		// });
+    $.ajax
+    ({
+      type: "GET",
+      url: "https://staging.cobrain.io/api/v1/session",
+      dataType: 'json',
+      async: true,
+      // data:
+      // {
+      //   "login": "demo",
+      //   "password": "demo"
+      // },
+      success: function (res){
+        $('#main').text('request succeed - '+res);
+      },
+      error: function (request, status, error) {
+        $('#main').text('request failed - '+request.responseText);
+
+        // this is working, with redirect to https://naja.cobrain.io 
+        // window.location.replace("https://staging.cobrain.io/oauth/authorize?response_type=token&client_id=50394f0dabaf17f1ee2086c23a6ab8411cde35569ecf541a3278f8a27f8b9e6f&redirect_uri=https://naja.cobrain.io/auth&state=a691454c-4017-4765-a0d2-21224fd83209&prompt=false");
+
+        // this is working as well
+        window.location.replace("https://web.cobrain.io/sign_in?next=http%3A%2F%2Fweb.cobrain.io%2Foauth%2Fauthorize%3Fresponse_type%3Dtoken%26client_id%3Dae808d5acffb0284d61b51e432049748cfd90f16a640c120e7aae4955b8ce6f5%26redirect_uri%3Dhttps%3A%2F%2Fapp.cobrain.io%2Fauth%26state%3D909fa747-a956-4894-8df4-6ee6c88ac917%26prompt%3Dfalse");
+
+
+      }
+    });  
+
+
+
+}); /* end of init */
+
+	
 
 </script>
 
 
-
-
-
-
-</div>
-<iframe name="preview-frame" id="preview-frame" src="cobrain.io.htm" frameborder="0"></iframe>
-
+</body>
 </html>
+
