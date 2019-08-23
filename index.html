@@ -25,10 +25,11 @@ $(function() { /* init */
   console.log('window.location.href');
   $('#main').text('window.location.href - ');
 
-  	console.log('document.location - ', document.location.href);
-	console.log('location.pathname - ',  window.location.pathname); // Returns path only
-	console.log('location.href - ', window.location.href); // Returns full URL
-	// alert('ok');
+	setTimeout(function(){
+	  	console.log('document.location - ', document.location.href);
+		console.log('location.pathname - ',  window.location.pathname); // Returns path only
+		console.log('location.href - ', window.location.href); // Returns full URL
+	}, 5000);
 
     $.ajax
     ({
