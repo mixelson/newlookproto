@@ -25,16 +25,28 @@ $(function() { /* init */
   console.log('window.location.href');
   $('#main').text('window.location.href - ');
 
-	  	console.log('document.location - ', document.location.href);
-		console.log('location.pathname - ',  window.location.pathname); // Returns path only
-		console.log('location.href - ', window.location.href); // Returns full URL
+	 //  	console.log('document.location - ', document.location.href);
+		// console.log('location.pathname - ',  window.location.pathname); // Returns path only
+		// console.log('location.href - ', window.location.href); // Returns full URL
 
 //document.location -  https://mixelson.github.io/newlookproto/#access_token=a5ab5ed1e56dccb600cfe456af5bd5e0be4fefed13defaceaf870cf3bb20c3fc&expires_in=7200
-	var authHeader = document.location.match(/access_token\=.+\&/gi);
-		authHeader = authHeader.replace('access_token=','');
-		authHeader = authHeader.replace('&','');
-	// console.log(str.match(/access_token\=.+\&/gi));
+	// var authHeader = document.location;
+	// 	console.log('1:'+authHeader);
+	// 	if ( authHeader.match(/access_token\=.+\&/gi) != '' ) {
+	// 		authHeader = authHeader.match(/access_token\=.+\&/gi);
+	// 	console.log('2:'+authHeader);
+	// 		authHeader = authHeader.replace('access_token=','');
+	// 	console.log('3:'+authHeader);
+	// 		authHeader = authHeader.replace('&','');
+	// 	console.log('4:'+authHeader);
+	// 	} else {
+	// 		authHeader = '';
+	// 	}
+
+	authHeader = getParameterByName('access_token');
+
 	$('#main').text('authHeader - '+authHeader);
+	console.log('authHeader - '+authHeader);
 
 
     $.ajax
@@ -80,6 +92,15 @@ $(function() { /* init */
 }); /* end of init */
 
 	
+	function getParameterByName(name, url) {
+	    if (!url) url = window.location.href;
+	    name = name.replace(/[\[\]]/g, '\\$&');
+	    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+	        results = regex.exec(url);
+	    if (!results) return null;
+	    if (!results[2]) return '';
+	    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+	}	
 
 </script>
 
