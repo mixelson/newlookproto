@@ -42,6 +42,7 @@ $(function() { /* init */
 	// 	} else {
 	// 		authHeader = '';
 	// 	}
+	// https://mixelson.github.io/newlookproto/#access_token=57c13e85ef8e269039d43bde7d5b78d7e66ad9cca08e8f7e8b9026daa79b74c7&expires_in=7200
 
 	authHeader = getParameterByName('access_token');
 
@@ -93,7 +94,8 @@ $(function() { /* init */
 
 	
 	function getParameterByName(name, url) {
-	    if (!url) url = window.location.href;
+	    if (!url) url = document.location; 
+	    //window.location.href;
 	    name = name.replace(/[\[\]]/g, '\\$&');
 	    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
 	        results = regex.exec(url);
