@@ -53,8 +53,8 @@ $(function() { /* init */
     $.ajax
     ({
       type: "GET",
-      url: "https://staging.cobrain.io/api/v1/session",
-      data: { Bearer: authHeader },
+      url: "https://staging.cobrain.io/api/v1/session?Bearer="+authHeader,
+      // data: { Bearer: authHeader },
       dataType: 'json',
       async: true,
       success: function (res){
