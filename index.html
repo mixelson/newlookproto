@@ -25,7 +25,6 @@ $(function() { /* init */
   console.log('window.location.href');
   $('#main').text('window.location.href - ');
 
-	setTimeout(function(){
 	  	console.log('document.location - ', document.location.href);
 		console.log('location.pathname - ',  window.location.pathname); // Returns path only
 		console.log('location.href - ', window.location.href); // Returns full URL
@@ -53,7 +52,9 @@ $(function() { /* init */
 
 
 		// window.location.replace("https://staging.cobrain.io/oauth/oauth/authorize?client_id=c37348eccd39465e44b627bacfb7ab752e4632a7020868d02f55796082568c7c&redirect_uri=https%3A%2F%2Fmixelson.github.io%2Fnewlookproto&response_type=code&scope=");
-		window.location.replace("https://staging.cobrain.io/oauth/oauth/authorize?client_id=c37348eccd39465e44b627bacfb7ab752e4632a7020868d02f55796082568c7c&redirect_uri=https%3A%2F%2Fmixelson.github.io%2Fnewlookproto&response_type=token");
+		setTimeout(function(){
+			window.location.replace("https://staging.cobrain.io/oauth/oauth/authorize?client_id=c37348eccd39465e44b627bacfb7ab752e4632a7020868d02f55796082568c7c&redirect_uri=https%3A%2F%2Fmixelson.github.io%2Fnewlookproto&response_type=token");
+		}); /* end of init */
 
 
 		// https://staging.cobrain.io/oauth/oauth/authorize?client_id=c37348eccd39465e44b627bacfb7ab752e4632a7020868d02f55796082568c7c&redirect_uri=https%3A%2F%2Fmixelson.github.io%2Fnewlookproto&response_type=code&scope=
@@ -65,7 +66,6 @@ $(function() { /* init */
 
 
 
-}); /* end of init */
 
 	
 
